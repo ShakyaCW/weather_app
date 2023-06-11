@@ -18,7 +18,7 @@
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
-    background-image:linear-gradient(rgba(0,0,0,0.40),rgba(0, 0, 0, 0.40)),url(bg3.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.40),rgba(0, 0, 0, 0.40)),url(background.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
