@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+.container {
+  padding: 10px 5%;
+  padding-bottom: 50px;
+  border-radius: 30px;
+  max-width: 500px;
+  justify-content: center;
+  display: grid;
+}
+
+.container .heading {
+  text-align: center;
+  padding-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  font-size: 30px;
+}
+
+.container .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 15px;
+}
+
+.container .box-container .box {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  border-radius: 30px;
+  background: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.container .box-container .box img {
+  height: 80px;
+}
+
+.container .box-container .box h3 {
+  color: #444;
+  font-size: 22px;
+  padding: 10px 0;
+}
+
+.container .box-container .box p {
+  color: #777;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.btn {
+  display: inline-block;
+  background: #4bb9f4;
+  color: black;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 8px 25px;
+  max-width: 200px;
+
+}
+
+.button{
+  justify-content: center;
+  display: flex;
+}
+
+.btn:hover {
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.container .box-container .box:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0px;
+  }
+  * {
+    padding: 0px;
+  }
+  
+  .container .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .container .box-container .box {
+    padding: 20px;
+  }
+
+  .container .box-container .box img {
+    height: 60px;
+  }
+
+  .container .box-container .box h3 {
+    font-size: 18px;
+  }
+
+  .container .box-container .box p {
+    font-size: 14px;
+  }
+
+  .container .box-container .box .btn {
+    font-size: 15px;
+    padding: 6px 20px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.innerContainer {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-card {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  background-image: url('sky.jpg');
+  background-color: rgba(67, 152, 224, 0.9);
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+}
+
+.card-bottom {
+  display: inline-flex;
+  position: relative;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #36454F;
+  width: 500px;
+  max-width: 500px;
+  height: 120px;
+  margin-top: auto;
+  font-size: 15px;
+  color: #fff;
+}
+
+.card-top {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.top-lefty {
+  margin-left: 20px;
+}
+
+.column {
+  width: 50%;
+  float: left;
+}
+
+.card-top .top-lefty {
+  padding-left: 10px;
+}
+
+.time-para {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+
+.current-status {
+  margin-top: 30px;
+  display: inline-flex;
+}
+
+.current-status p {
+  margin-left: 10px;
+}
+
+.card-top .top-lefty h3 {
+  font-size: 25px;
+}
+
+.top-righty h3 {
+  font-size: 45px;
+}
+
+.top-righty .min-max {
+  margin-top: 20px;
+}
+
+.card-bottom-left {
+  margin: auto 5px;
+  padding-left: 10px;
+}
+
+.card-bottom-left .conditions {
+  margin: 5px;
+}
+
+.card-bottom-left .condition-label {
+  font-weight: bold;
+}
+
+.card-bottom-middle {
+  margin-left: 25px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.card-bottom-middle .rocket-icon {
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.card-bottom-right {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertical-line {
+  border-left: 1px solid lightgray;
+  height: 75%;
+  position: absolute;
+  left: 36%;
+  top: 10%;
+  opacity: 0.5;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-line-two {
+  border-left: 1px solid lightgray;
+  height: 75%;
+  position: absolute;
+  left: 68%;
+  top: 10%;
+  opacity: 0.5;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------Responsive------------------- */
+
+@media (max-width: 768px) {
+  .main-card {
+    width: 100%;
+    margin: 20px auto;
+    height: auto;
+  }
+
+  .card-top {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .top-lefty {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  
+
+  .top-righty {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .top-righty .min-max {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .card-bottom {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-bottom-left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .card-bottom-middle {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .card-bottom-right {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 764px) {
+  .main-card {
+    max-width: 400px;
+  }
+
+  .card-bottom {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+  }
+
+  .top-righty h3 {
+    font-size: 40px;
+  }
+
+  .time-para {
+    margin-right: 40px;
+  }
+
+  .innerContainer {
+    height: 650px;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .vertical-line-two {
+    display: none;
+  }
+
+  .top-lefty h3{
+    justify-content: center;
+    text-align: center;
+  }
+
+  .card-bottom-middle {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 20px;
+  }
+
+  .card-bottom-middle .rocket-icon {
+    margin-right: 50px;
+  }
+
+  .current-status{
+    margin-right: 20px;
+  }
+
+  .city {
+    margin-right: 25px;
+  }
+
+  .minTemp{
+    margin-right: 15px;
+  }
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
