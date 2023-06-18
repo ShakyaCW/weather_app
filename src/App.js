@@ -15,7 +15,6 @@ const extractCityCodes = async () => {
   }
 };
 
-
 // Function to fetch weather data for a given city code
 const fetchWeatherData = async (cityCode) => {
   try {
@@ -53,20 +52,36 @@ const App = () => {
     fetchWeatherDataForCities();
   }, [cityCodes]);
 
+  // Function to handle search button click
+  const handleSearch = async (city) => {
+    try {
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      
+      // Extract the city ID from the response
+      const cityId = data.id;
+
+      // Add the city ID to the cityCodes state
+      setCityCodes((prevCityCodes) => [...prevCityCodes, cityId]);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
   return (
     <div className="main">
       <div id="appName">
         <h1 className='heading'>Weather App</h1>
       </div>
       <div className="inputBox">
-        <InputBox />
+        <InputBox onSearch={handleSearch} />
       </div>
       
       <div className="weather-cards">
-        
         {weatherData.map((weather, index) => (
           <WeatherCard
-            key={index}   
+            key={index}
             cityName={weather.name}
             celcius={Math.round(weather.main.temp - 273)}
             description={weather.weather[0].description}
@@ -78,18 +93,17 @@ const App = () => {
             pressure={weather.main.pressure}
             humidity={weather.main.humidity}
             sunrise={new Date(
-            weather.sys.sunrise * 1000 + weather.timezone * 1000 - 19800 * 1000).toLocaleTimeString()}
-            sunset={new Date(weather.sys.sunset * 1000 + weather.timezone * 1000 - 19800 * 1000).toLocaleTimeString()}
-            visibility={weather.visibility/1000}
+              weather.sys.sunrise * 1000 + weather.timezone * 1000 - 19800 * 1000
+            ).toLocaleTimeString()}
+            sunset={new Date(
+              weather.sys.sunset * 1000 + weather.timezone * 1000 - 19800 * 1000
+            ).toLocaleTimeString()}
+            visibility={weather.visibility / 1000}
             windSpeed={weather.wind.speed}
             windDegree={weather.wind.deg}
-            
           />
-          
         ))}
-        
       </div>
-    
     </div>
   );
 };
