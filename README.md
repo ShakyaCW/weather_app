@@ -1,3 +1,17 @@
+# Description
+
+This Github repository contains the Weather App, a web application that provides real-time weather information for various cities. The application is built using ReactJS, and it allows users to retrieve weather data such as temperature, humidity, wind speed, and more.
+
+Find the Docker Image for this repository at: https://hub.docker.com/r/shakyacw/weather_app
+
+# Web View
+
+![Screenshot (5)](https://github.com/ShakyaCW/weather_app/assets/108785724/5e233aa3-e9e5-4d5f-bfc5-70c0a9217402)
+
+# Mobile View
+
+![Screenshot (39)](https://github.com/ShakyaCW/weather_app/assets/108785724/ac0feaca-bd32-4000-b648-e3a4fe715a48)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
